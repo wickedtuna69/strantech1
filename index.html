@@ -226,8 +226,7 @@
     /* Hero - clean corporate */
     .hero {
       min-height: 85vh;
-      display: flex;
-      align-items: center;
+      display: flex; align-items: center; justify-content: flex-start;
       position: relative;
       padding: 8rem 1.5rem 5rem;
       background: linear-gradient(135deg, var(--navy) 0%, #0d2137 50%, #132337 100%);
@@ -244,13 +243,7 @@
         radial-gradient(ellipse 40% 50% at 20% 80%, rgba(107,45,139,0.1), transparent);
     }
 
-    .hero-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-      width: 100%;
-    }
+    
 
     .pill {
       display: inline-flex;
@@ -579,13 +572,13 @@
     /* Network graphic in hero */
     .hero-network {
       position: absolute;
-      right: 0;
+      right: -2%;
       top: 50%;
       transform: translateY(-50%);
-      width: 55%;
-      max-width: 620px;
-      height: 70%;
-      opacity: 0.85;
+      width: 48%;
+      max-width: 560px;
+      height: 75%;
+      opacity: 0.7;
       pointer-events: none;
       z-index: 1;
     }
@@ -595,11 +588,7 @@
       height: 100%;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      max-width: 560px;
-    }
+    
 
     @media (max-width: 900px) {
       .hero-network {
@@ -610,6 +599,56 @@
         bottom: 0;
         transform: none;
         opacity: 0.4;
+      }
+      
+    }
+
+  
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: inherit;
+      padding: 0 1.5rem;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 540px;
+      flex-shrink: 0;
+    }
+
+    .hero-network {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50%;
+      max-width: 580px;
+      height: 75%;
+      opacity: 0.72;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-network svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 900px) {
+      .hero-network {
+        width: 100%;
+        max-width: none;
+        height: 45%;
+        top: auto;
+        bottom: 0;
+        transform: none;
+        opacity: 0.35;
       }
       .hero-content {
         max-width: 100%;
@@ -753,6 +792,7 @@
 
   <!-- Hero -->
   <section class="hero">
+    <div class="hero-inner">
 
       <div class="hero-network" aria-hidden="true">
         <svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
@@ -855,6 +895,7 @@
         <a href="leadership.html" class="btn btn-outline">Meet Our Leadership</a>
       </div>
     </div>
+    </div>
   </section>
 
   <!-- Banner -->
@@ -878,93 +919,67 @@
         <div class="card">
           <h3>Data Center Solutions</h3>
           <ul>
-            <li>Data Center Assessment</li>
-            <li>Infrastructure Engineering/Design</li>
-            <li>Thermal Management</li>
-            <li>Network/Facility Cooling Systems</li>
-            <li>Power Distribution & Fire Suppression</li>
-            <li>Environmental & Physical Security</li>
-            <li>Racks, Cable Ladder, Conveyance</li>
+            <li>Data Center Assessment & Design</li>
+            <li>Thermal & Power Management</li>
+            <li>High-Density Cooling Systems</li>
+            <li>Physical & Electronic Security</li>
+            <li>Racks, Cable Ladder & Conveyance</li>
             <li>Preventative Maintenance</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Specialized & Secure Construction</h3>
+          <ul>
+            <li>SCIF, NOC & Data Center Build</li>
+            <li>Design/Build & Site Management</li>
+            <li>Mechanical, Electrical & Plumbing</li>
+            <li>Fire Suppression & Monitoring</li>
+            <li>Threat Mitigation Systems</li>
+            <li>Cleared American Worker (CAW) Support</li>
           </ul>
         </div>
         <div class="card">
           <h3>Power Systems</h3>
           <ul>
-            <li>Design/Engineering</li>
-            <li>AC UPS and Buss Systems</li>
-            <li>DC Power Plant</li>
-            <li>Batteries, Rectifiers, Inverters</li>
-            <li>ATS & Power Distribution Units</li>
-            <li>Grounding & Lighting</li>
-            <li>Fault Protection Subsystems</li>
-            <li>Backup Generators / UPS / Fuel Cells</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Cable Plant Infrastructure</h3>
-          <ul>
-            <li>ISP/OSP Construction and Cabling</li>
-            <li>Structured/Bundled Fiber</li>
-            <li>Installation & Maintenance</li>
-            <li>Facilities/Electrical WAN Circuits</li>
-            <li>Wireless LAN</li>
-            <li>Protected Distribution Systems (SIPRNET)</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Specialized Construction</h3>
-          <ul>
-            <li>Design/Engineering/CAD</li>
-            <li>Project/Site Management</li>
-            <li>Design, Build or Remodeling</li>
-            <li>NOCs, Data Centers, Huts/Vaults, SCIF</li>
-            <li>Power Systems, Grounding, UPS</li>
-            <li>Mechanical/Electrical/Plumbing</li>
-            <li>Fire Suppression & Environmental Monitoring</li>
-            <li>Site Physical Security & Preparation</li>
+            <li>AC/DC Power Plant Design</li>
+            <li>UPS, Batteries & Inverters</li>
+            <li>ATS & Power Distribution</li>
+            <li>Backup Generators & Fuel Cells</li>
+            <li>Grounding & Fault Protection</li>
+            <li>Mission-Critical Reliability</li>
           </ul>
         </div>
         <div class="card">
           <h3>International Secure Construction</h3>
           <ul>
-            <li>Cleared American Workers (CAW) support</li>
-            <li>Program Management/Engineering</li>
-            <li>Environmental/Mechanical Systems</li>
-            <li>Plumbing/Electrical Systems, Fire Protection</li>
-            <li>Interior Finishes/Equipment</li>
-            <li>Threat Mitigation/Security Systems</li>
-            <li>Technical Professional Services</li>
+            <li>Global Program Management</li>
+            <li>Cleared Workforce Deployment</li>
+            <li>Secure Facilities Fit-Out</li>
+            <li>Environmental & Mechanical Systems</li>
+            <li>Security & Threat Mitigation</li>
+            <li>End-to-End Project Lifecycle</li>
           </ul>
         </div>
         <div class="card">
-          <h3>HVAC & Advanced Cooling</h3>
+          <h3>Cable Plant & Network Infrastructure</h3>
           <ul>
-            <li>Design/Engineering</li>
-            <li>Computer Room Air/Perimeter Cooling</li>
-            <li>High Density Cooling / Chilled Doors</li>
-            <li>HAC/CAC</li>
-            <li>Mechanical Engineering</li>
-            <li>Plumbing and Distribution Systems</li>
+            <li>ISP / OSP Construction</li>
+            <li>Structured & Bundled Fiber</li>
+            <li>Protected Distribution (SIPRNET)</li>
+            <li>Wireless LAN & WAN Circuits</li>
+            <li>Installation, Test & Maintenance</li>
+            <li>Enterprise Scalability</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Unified Communications</h3>
+          <h3>Unified Communications & Telecom</h3>
           <ul>
-            <li>Central Office Planning/Layout & Design</li>
-            <li>DWDM Installs/Tune-Up</li>
-            <li>GPON, VoIP Infrastructure & Cutover</li>
-            <li>Integrated Alarm Systems MDF/IDF</li>
-            <li>System Cutover & Racks/Cable Ladder</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Telecom & Wireless + Facilities</h3>
-          <ul>
-            <li>Voice, Data and Wireless Networks</li>
-            <li>Design, Build, Operation and Maintenance</li>
-            <li>ISP, OSP, Data Center, Power and Mechanical</li>
-            <li>On-site technical expertise & maintenance</li>
+            <li>Voice, Data & Wireless Networks</li>
+            <li>GPON, VoIP & DWDM</li>
+            <li>Central Office Design & Cutover</li>
+            <li>Integrated Alarm Systems</li>
+            <li>Design, Build & Lifecycle Support</li>
+            <li>Mission-Critical Connectivity</li>
           </ul>
         </div>
       </div>
