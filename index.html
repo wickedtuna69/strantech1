@@ -668,6 +668,47 @@
       }
     }
 
+  
+    /* Photo Gallery */
+    .gallery-section {
+      padding: 4.5rem 1.5rem;
+      background: var(--bg);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.25rem;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: #0a1628;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+    .gallery-item .caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.1rem 1rem 0.9rem;
+      background: linear-gradient(to top, rgba(10,22,40,0.85), transparent);
+      color: white;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
   </style>
 
   
@@ -778,7 +819,7 @@
       </a>
 
       <nav>
-        <a href="#capabilities">Capabilities</a>
+        <a href="capabilities.html">Capabilities</a>
         <a href="#contracts">Contracts</a>
         <a href="leadership.html">Leadership</a>
         <a href="#performance">Past Performance</a>
@@ -795,7 +836,7 @@
   </header>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#capabilities" onclick="closeMobile()">Capabilities</a>
+    <a href="capabilities.html">Capabilities</a>
     <a href="#contracts" onclick="closeMobile()">Contracts</a>
     <a href="leadership.html" onclick="closeMobile()">Leadership</a>
     <a href="#performance" onclick="closeMobile()">Past Performance</a>
@@ -904,7 +945,7 @@
       </p>
       
       <div class="hero-actions">
-        <a href="#capabilities" class="btn btn-primary">Explore Capabilities</a>
+        <a href="capabilities.html" class="btn btn-primary">Explore Capabilities</a>
         <a href="leadership.html" class="btn btn-outline">Meet Our Leadership</a>
       </div>
     </div>
@@ -1000,6 +1041,9 @@
   </section>
 
   <!-- Contracts -->
+  
+  
+  
   <section id="contracts">
     <div class="container">
       <div class="section-label">Credentials & Vehicles</div>
