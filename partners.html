@@ -50,7 +50,7 @@
 .nav-container{min-width:0}
 .logo-group{min-width:0;flex-shrink:1}
 .logo-text{white-space:nowrap}
-.nav-actions{display:flex;gap:.5rem;align-items:center;flex-shrink:0;margin-left:auto}
+.nav-actions{display:flex;gap:.5rem;align-items:center;flex-shrink:0;margin-left:auto}.cage-badge{margin-left:.65rem;}
 .theme-toggle,.mobile-toggle{margin-right:0;align-items:center;justify-content:center;border:1px solid var(--border);background:var(--card);border-radius:8px;color:var(--text);cursor:pointer;flex-shrink:0;padding:0;line-height:0}
 .theme-toggle svg,.mobile-toggle svg{width:20px;height:20px;display:block}
 .theme-toggle:hover,.mobile-toggle:hover{border-color:var(--blue);color:var(--blue)}
@@ -80,7 +80,7 @@
         <a href="index.html">Home</a>
         <a href="capabilities.html">Capabilities</a>
         <a href="partners.html" class="active">Partners</a>
-        <a href="leadership.html">Leadership</a>
+        <a href="about.html">About Us</a>
         <a href="locations.html">Locations</a>
         <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
         <button class="theme-toggle" id="themeToggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
@@ -95,7 +95,7 @@
     <a href="index.html" onclick="closeMobile()">Home</a>
     <a href="capabilities.html" onclick="closeMobile()">Capabilities</a>
     <a href="partners.html" onclick="closeMobile()">Partners</a>
-    <a href="leadership.html" onclick="closeMobile()">Leadership</a>
+    <a href="about.html" onclick="closeMobile()">About Us</a>
     <a href="locations.html" onclick="closeMobile()">Locations</a>
     <a href="index.html#contact" class="btn btn-primary" style="margin-top:0.4rem;" onclick="closeMobile()">Contact Us</a>
   </div>
@@ -174,7 +174,7 @@
     const root=document.documentElement;
     const toggles=[document.getElementById('themeToggle'),document.getElementById('themeToggleMobile')];
     /*header-icons*/const ICON_SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';const ICON_MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';const ICON_MENU='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';const ICON_CLOSE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';function setTheme(t){if(t==='dark')root.setAttribute('data-theme','dark');else root.removeAttribute('data-theme');localStorage.setItem('theme',t);toggles.forEach(b=>{if(b)b.innerHTML = t === 'dark' ? ICON_SUN : ICON_MOON;});}
-    setTheme(localStorage.getItem('theme')||'light');
+    setTheme(localStorage.getItem('theme') || 'dark');
     toggles.forEach(b=>{if(b)b.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));});
     const mobileToggle=document.getElementById('mobileToggle'),mobileMenu=document.getElementById('mobileMenu');
     mobileToggle.addEventListener('click',()=>{mobileMenu.classList.toggle('open');mobileToggle.innerHTML = mobileMenu.classList.contains('open') ? ICON_CLOSE : ICON_MENU;});

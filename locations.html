@@ -147,7 +147,7 @@
 .nav-container{min-width:0}
 .logo-group{min-width:0;flex-shrink:1}
 .logo-text{white-space:nowrap}
-.nav-actions{display:flex;gap:.5rem;align-items:center;flex-shrink:0;margin-left:auto}
+.nav-actions{display:flex;gap:.5rem;align-items:center;flex-shrink:0;margin-left:auto}.cage-badge{margin-left:.65rem;}
 .theme-toggle,.mobile-toggle{margin-right:0;align-items:center;justify-content:center;border:1px solid var(--border);background:var(--card);border-radius:8px;color:var(--text);cursor:pointer;flex-shrink:0;padding:0;line-height:0}
 .theme-toggle svg,.mobile-toggle svg{width:20px;height:20px;display:block}
 .theme-toggle:hover,.mobile-toggle:hover{border-color:var(--blue);color:var(--blue)}
@@ -177,7 +177,7 @@
         <a href="index.html">Home</a>
         <a href="index.html#capabilities">Capabilities</a>
         <a href="index.html#contracts">Contracts</a>
-        <a href="leadership.html" class="">Leadership</a>
+        <a href="about.html" class="">About Us</a>
         <a href="locations.html" class="active">Locations</a>
         <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
         <button class="theme-toggle" id="themeToggle" title="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
@@ -192,7 +192,7 @@
     <a href="index.html" onclick="closeMobile()">Home</a>
     <a href="index.html#capabilities" onclick="closeMobile()">Capabilities</a>
     <a href="index.html#contracts" onclick="closeMobile()">Contracts</a>
-    <a href="leadership.html" onclick="closeMobile()">Leadership</a>
+    <a href="about.html" onclick="closeMobile()">About Us</a>
     <a href="locations.html" onclick="closeMobile()">Locations</a>
     <a href="index.html#contact" class="btn btn-primary" style="margin-top:0.5rem;" onclick="closeMobile()">Contact Us</a>
   </div>
@@ -275,7 +275,7 @@
       localStorage.setItem('theme', theme);
       toggles.forEach(t => { if(t) t.innerHTML = theme === 'dark' ? ICON_SUN : ICON_MOON; });
     }
-    setTheme(localStorage.getItem('theme') || 'light');
+    setTheme(localStorage.getItem('theme') || 'dark');
     toggles.forEach(btn => {
       if(btn) btn.addEventListener('click', () => {
         setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');

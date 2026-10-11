@@ -803,7 +803,7 @@
 .nav-container{min-width:0}
 .logo-group{min-width:0;flex-shrink:1}
 .logo-text{white-space:nowrap}
-.nav-actions{display:flex;gap:.5rem;align-items:center;flex-shrink:0;margin-left:auto}
+.nav-actions{display:flex;gap:.5rem;align-items:center;flex-shrink:0;margin-left:auto}.cage-badge{margin-left:.65rem;}
 .theme-toggle,.mobile-toggle{margin-right:0;align-items:center;justify-content:center;border:1px solid var(--border);background:var(--card);border-radius:8px;color:var(--text);cursor:pointer;flex-shrink:0;padding:0;line-height:0}
 .theme-toggle svg,.mobile-toggle svg{width:20px;height:20px;display:block}
 .theme-toggle:hover,.mobile-toggle:hover{border-color:var(--blue);color:var(--blue)}
@@ -835,7 +835,7 @@
         <a href="capabilities.html">Capabilities</a>
         <a href="#contracts">Contracts</a>
         <a href="partners.html">Partners</a>
-        <a href="leadership.html">Leadership</a>
+        <a href="about.html">About Us</a>
         <a href="#performance">Past Performance</a>
         <a href="locations.html">Locations</a>
         <a href="#contact" class="btn btn-primary">Contact Us</a>
@@ -853,7 +853,7 @@
     <a href="capabilities.html">Capabilities</a>
     <a href="#contracts" onclick="closeMobile()">Contracts</a>
     <a href="partners.html" onclick="closeMobile()">Partners</a>
-    <a href="leadership.html" onclick="closeMobile()">Leadership</a>
+    <a href="about.html" onclick="closeMobile()">About Us</a>
     <a href="#performance" onclick="closeMobile()">Past Performance</a>
     <a href="locations.html" onclick="closeMobile()">Locations</a>
     <a href="#contact" class="btn btn-primary" style="margin-top:0.5rem;" onclick="closeMobile()">Contact Us</a>
@@ -961,7 +961,7 @@
       
       <div class="hero-actions">
         <a href="capabilities.html" class="btn btn-primary">Explore Capabilities</a>
-        <a href="leadership.html" class="btn btn-outline">Meet Our Leadership</a>
+        <a href="about.html" class="btn btn-outline">About Us</a>
       </div>
     </div>
     </div>
@@ -1216,8 +1216,8 @@
       toggles.forEach(t => { if(t) t.innerHTML = theme === 'dark' ? ICON_SUN : ICON_MOON; });
     }
 
-    // Default to light (corporate) unless user previously chose dark
-    const saved = localStorage.getItem('theme') || 'light';
+    // Default to dark unless user previously chose light
+    const saved = localStorage.getItem('theme') || 'dark';
     setTheme(saved);
 
     toggles.forEach(btn => {
