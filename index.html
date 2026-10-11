@@ -182,17 +182,14 @@
     }
 
     .theme-toggle, .mobile-toggle {
-      background: none;
-      border: 1px solid var(--border);
-      color: var(--text);
-      width: 36px;
-      height: 36px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: none;
+      margin-right: 0.5rem;
+    }
+    @media (max-width: 980px) {
+      .nav-container { padding: 0.75rem 1rem 0.75rem 1.25rem; }
+      .mobile-toggle, #themeToggleMobile {
+        width: 42px; height: 42px; font-size: 1.15rem;
+      }
     }
 
     .mobile-toggle { display: none; }
@@ -821,6 +818,7 @@
       <nav>
         <a href="capabilities.html">Capabilities</a>
         <a href="#contracts">Contracts</a>
+        <a href="partners.html">Partners</a>
         <a href="leadership.html">Leadership</a>
         <a href="#performance">Past Performance</a>
         <a href="locations.html">Locations</a>
@@ -838,6 +836,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="capabilities.html">Capabilities</a>
     <a href="#contracts" onclick="closeMobile()">Contracts</a>
+    <a href="partners.html" onclick="closeMobile()">Partners</a>
     <a href="leadership.html" onclick="closeMobile()">Leadership</a>
     <a href="#performance" onclick="closeMobile()">Past Performance</a>
     <a href="locations.html" onclick="closeMobile()">Locations</a>
