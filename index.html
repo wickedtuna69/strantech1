@@ -1,1247 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STRANTECH | Mission-Critical Infrastructure & Defense</title>
-  <meta name="description" content="STRANTECH delivers mission-critical infrastructure for defense and government: data centers, power & UPS systems, secure facilities, and cable plant. CAGE 1W2E4. Top Secret facility clearance." />
-  <link rel="icon" type="image/png" href="data:image/png;base64,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" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --navy: #0a1628;
-      --navy-light: #132337;
-      --blue: #0055a5;
-      --blue-bright: #0070c9;
-      --cyan: #00a3e0;
-      --purple: #6b2d8b;
-      --orange: #e85d04;
-      --text: #1a1a1a;
-      --text-light: #f5f7fa;
-      --muted: #5a6577;
-      --muted-light: #a0aec0;
-      --bg: #ffffff;
-      --bg-alt: #f4f6f9;
-      --card: #ffffff;
-      --border: #e2e8f0;
-      --header-bg: rgba(255,255,255,0.97);
-    }
-
-    [data-theme="dark"] {
-      --navy: #0a1628;
-      --navy-light: #132337;
-      --text: #f0f4f8;
-      --text-light: #f0f4f8;
-      --muted: #94a3b8;
-      --muted-light: #64748b;
-      --bg: #0a0f1a;
-      --bg-alt: #111827;
-      --card: #1a2332;
-      --border: #2d3748;
-      --header-bg: rgba(10,15,26,0.95);
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      overflow-x: hidden;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    /* Accent line */
-    .accent-line {
-      height: 3px;
-      width: 80px;
-      background: linear-gradient(90deg, var(--purple), var(--orange));
-      border-radius: 2px;
-      margin: 1rem 0 1.5rem;
-    }
-
-    .accent-line-center {
-      height: 3px;
-      width: 100px;
-      background: linear-gradient(90deg, var(--purple), var(--orange));
-      border-radius: 2px;
-      margin: 0 auto 1.5rem;
-    }
-
-    /* Header - clean corporate style */
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: var(--header-bg);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0.75rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-
-    .logo-group {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      text-decoration: none;
-      flex-shrink: 0;
-    }
-
-    .logo-group img {
-      height: 38px;
-      width: auto;
-    }
-
-    .logo-text {
-      font-weight: 800;
-      font-size: 1.25rem;
-      letter-spacing: 0.03em;
-      color: var(--text);
-    }
-
-    .cage-badge {
-      font-size: 0.65rem;
-      font-weight: 600;
-      background: rgba(0,85,165,0.08);
-      color: var(--blue);
-      padding: 0.2rem 0.45rem;
-      border-radius: 3px;
-      border: 1px solid rgba(0,85,165,0.2);
-      margin-left: 0.3rem;
-    }
-
-    [data-theme="dark"] .cage-badge {
-      background: rgba(0,163,224,0.12);
-      color: var(--cyan);
-      border-color: rgba(0,163,224,0.3);
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    nav a:hover { color: var(--blue); }
-
-    [data-theme="dark"] nav a:hover { color: var(--cyan); }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.6rem 1.25rem;
-      border-radius: 4px;
-      font-weight: 600;
-      font-size: 0.875rem;
-      text-decoration: none;
-      transition: all 0.2s;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn-primary {
-      background: var(--blue);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: var(--blue-bright);
-      box-shadow: 0 4px 12px rgba(0,85,165,0.25);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--blue);
-      color: var(--blue);
-    }
-
-    .theme-toggle, .mobile-toggle {
-      display: none;
-      margin-right: 0.5rem;
-    }
-    @media (max-width: 980px) {
-      .nav-container { padding: 0.75rem 1rem 0.75rem 1.25rem; }
-      .mobile-toggle, #themeToggleMobile {
-        width: 42px; height: 42px; font-size: 1.15rem;
-      }
-    }
-
-    .mobile-toggle { display: none; }
-
-    /* Mobile menu */
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 60px;
-      left: 0; right: 0;
-      background: var(--header-bg);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 1.5rem 1.5rem;
-      z-index: 99;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .mobile-menu.open { display: flex; }
-
-    .mobile-menu a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 500;
-      padding: 0.55rem 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.95rem;
-    }
-
-    /* Hero - clean corporate */
-    .hero {
-      min-height: 85vh;
-      display: flex; align-items: center; justify-content: flex-start;
-      position: relative;
-      padding: 8rem 1.5rem 5rem;
-      background: linear-gradient(135deg, var(--navy) 0%, #0d2137 50%, #132337 100%);
-      color: white;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: 
-        radial-gradient(ellipse 60% 40% at 70% 20%, rgba(0,85,165,0.15), transparent),
-        radial-gradient(ellipse 40% 50% at 20% 80%, rgba(107,45,139,0.1), transparent);
-    }
-
-    
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: #7dd3fc;
-      font-size: 0.78rem;
-      font-weight: 500;
-      padding: 0.4rem 0.9rem;
-      border-radius: 2px;
-      margin-bottom: 1.75rem;
-      letter-spacing: 0.02em;
-    }
-
-    h1 {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.025em;
-      margin-bottom: 0.4rem;
-      color: white;
-    }
-
-    h1 .accent {
-      color: #7dd3fc;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.75);
-      max-width: 580px;
-      margin-bottom: 2.25rem;
-      line-height: 1.7;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .hero .btn-primary {
-      background: white;
-      color: var(--navy);
-    }
-
-    .hero .btn-primary:hover {
-      background: #f0f4f8;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    }
-
-    .hero .btn-outline {
-      color: white;
-      border-color: rgba(255,255,255,0.35);
-    }
-
-    .hero .btn-outline:hover {
-      border-color: white;
-      background: rgba(255,255,255,0.08);
-      color: white;
-    }
-
-    /* Sections */
-    section { padding: 5rem 1.5rem; }
-
-    .container { max-width: 1100px; margin: 0 auto; }
-
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 0.5rem;
-    }
-
-    [data-theme="dark"] .section-label { color: var(--cyan); }
-
-    h2 {
-      font-size: clamp(1.7rem, 3.2vw, 2.3rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.3rem;
-      color: var(--text);
-    }
-
-    .lead {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 680px;
-      line-height: 1.7;
-    }
-
-    /* Cards */
-    .svc-grid, .loc-grid, .lead-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.35rem;
-      margin-top: 2.5rem;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1.6rem;
-      transition: all 0.25s;
-    }
-
-    .card:hover {
-      border-color: var(--blue);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-      transform: translateY(-2px);
-    }
-
-    [data-theme="dark"] .card:hover {
-      border-color: var(--cyan);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    }
-
-    .card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
-      color: var(--text);
-      font-weight: 650;
-    }
-
-    .card p, .card li {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .card ul {
-      list-style: none;
-      margin-top: 0.6rem;
-    }
-
-    .card ul li {
-      padding: 0.2rem 0;
-      padding-left: 1.05rem;
-      position: relative;
-    }
-
-    .card ul li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--blue);
-      font-weight: 700;
-      font-size: 0.8rem;
-    }
-
-    [data-theme="dark"] .card ul li::before { color: var(--cyan); }
-
-    /* Leadership */
-    .lead-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1.6rem;
-      transition: all 0.25s;
-    }
-
-    .lead-card:hover {
-      border-color: var(--purple);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-      transform: translateY(-2px);
-    }
-
-    .lead-card h3 {
-      font-size: 1.1rem;
-      color: var(--text);
-      margin-bottom: 0.15rem;
-      font-weight: 650;
-    }
-
-    .lead-card .title {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--blue);
-      margin-bottom: 0.85rem;
-    }
-
-    [data-theme="dark"] .lead-card .title { color: var(--cyan); }
-
-    .lead-card p {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    /* Two column */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1.35fr 1fr;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 800px) {
-      .two-col { grid-template-columns: 1fr; }
-    }
-
-    .side-box {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1.4rem;
-    }
-
-    .side-box h4 {
-      font-size: 0.9rem;
-      color: var(--blue);
-      margin-bottom: 0.7rem;
-      font-weight: 650;
-      letter-spacing: 0.02em;
-    }
-
-    [data-theme="dark"] .side-box h4 { color: var(--cyan); }
-
-    .side-box ul { list-style: none; }
-
-    .side-box li {
-      font-size: 0.88rem;
-      color: var(--muted);
-      padding: 0.25rem 0;
-      padding-left: 1.1rem;
-      position: relative;
-    }
-
-    .side-box li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--blue);
-      font-weight: 700;
-    }
-
-    [data-theme="dark"] .side-box li::before { color: var(--cyan); }
-
-    /* Banner */
-    .banner {
-      background: var(--navy);
-      color: white;
-      text-align: center;
-      padding: 3.5rem 1.5rem;
-    }
-
-    .banner h2 {
-      font-size: clamp(1.3rem, 2.8vw, 1.75rem);
-      max-width: 780px;
-      margin: 0 auto;
-      line-height: 1.4;
-      color: white;
-      font-weight: 600;
-    }
-
-    /* Contact */
-    .contact-form {
-      max-width: 540px;
-      margin-top: 2rem;
-      display: grid;
-      gap: 1rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
-      width: 100%;
-      padding: 0.8rem 1rem;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      color: var(--text);
-      font-family: inherit;
-      font-size: 0.95rem;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus,
-    .contact-form select:focus {
-      outline: none;
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(0,85,165,0.12);
-    }
-
-    .contact-form textarea { min-height: 120px; resize: vertical; }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    @media (max-width: 600px) {
-      .form-row { grid-template-columns: 1fr; }
-    }
-
-    /* Footer */
-    footer {
-      background: var(--navy);
-      color: rgba(255,255,255,0.7);
-      padding: 3rem 1.5rem 2rem;
-      text-align: center;
-      font-size: 0.875rem;
-    }
-
-    footer .logo-group {
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-
-    footer .logo-text { color: white; }
-
-    footer a { color: #7dd3fc; text-decoration: none; }
-
-    /* Mobile */
-    @media (max-width: 980px) {
-      nav { display: none; }
-      .mobile-toggle { display: flex; }
-      .hero { padding-top: 6.5rem; min-height: auto; }
-    }
-  
-    /* Network graphic in hero */
-    .hero-network {
-      position: absolute;
-      right: -2%;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 48%;
-      max-width: 560px;
-      height: 75%;
-      opacity: 0.7;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .hero-network svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    
-
-    @media (max-width: 900px) {
-      .hero-network {
-        width: 100%;
-        max-width: none;
-        height: 50%;
-        top: auto;
-        bottom: 0;
-        transform: none;
-        opacity: 0.4;
-      }
-      
-    }
-
-  
-    .hero-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      min-height: inherit;
-      padding: 0 1.5rem;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      max-width: 540px;
-      flex-shrink: 0;
-    }
-
-    .hero-network {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 50%;
-      max-width: 580px;
-      height: 75%;
-      opacity: 0.72;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .hero-network svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    @media (max-width: 900px) {
-      .hero-network {
-        width: 100%;
-        max-width: none;
-        height: 45%;
-        top: auto;
-        bottom: 0;
-        transform: none;
-        opacity: 0.35;
-      }
-      .hero-content {
-        max-width: 100%;
-      }
-    }
-
-  
-    #themeToggleMobile {
-      display: none;
-    }
-    @media (max-width: 980px) {
-      #themeToggleMobile {
-        display: flex;
-      }
-      #themeToggle {
-        display: none;
-      }
-    }
-
-  
-    /* Photo Gallery */
-    .gallery-section {
-      padding: 4.5rem 1.5rem;
-      background: var(--bg);
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-      margin-top: 2.25rem;
-    }
-    .gallery-item {
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-      aspect-ratio: 4/3;
-      background: #0a1628;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-    .gallery-item:hover img {
-      transform: scale(1.04);
-    }
-    .gallery-item .caption {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 1.1rem 1rem 0.9rem;
-      background: linear-gradient(to top, rgba(10,22,40,0.85), transparent);
-      color: white;
-      font-size: 0.88rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
-
-  </style>
-
-  
-  
-  
-
-
-  <style>
-    
-
-    
-
-    /* Subtle USA outline suggestion via positioned elements */
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    /* Approximate geographic positions on the stage */
-    
-    
-    
-    
-
-    @media (max-width: 768px) {
-      
-      
-      
-      
-    }
-  </style>
-
-
-  <style>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    /* Approximate positions on continental US map */
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-    
-
-    
-
-    @media (max-width: 700px) {
-      
-      
-      
-      
-      
-      
-    }
-  </style>
-
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STRANTECH | Mission-Critical Infrastructure & Defense</title>
+<meta name="description" content="STRANTECH delivers engineering, construction, power, telecommunications and mission-critical technology infrastructure for U.S. federal agencies, defense organizations and commercial customers worldwide. CAGE 1W2E4. Top Secret facility clearance.">
+<link rel="icon" type="image/png" href="images/strantech-logo.png">
+<link rel="stylesheet" href="polish.css">
 <style>
-/* STRANTECH header polish: professional icon buttons + mobile fit */
-.nav-container{min-width:0}
-.logo-group{min-width:0;flex-shrink:1}
-.logo-text{white-space:nowrap}
-.nav-actions{display:flex;gap:.5rem;align-items:center;flex-shrink:0;margin-left:auto}.cage-badge{margin-left:.65rem;}
-.theme-toggle,.mobile-toggle{margin-right:0;align-items:center;justify-content:center;border:1px solid var(--border);background:var(--card);border-radius:8px;color:var(--text);cursor:pointer;flex-shrink:0;padding:0;line-height:0}
-.theme-toggle svg,.mobile-toggle svg{width:20px;height:20px;display:block}
-.theme-toggle:hover,.mobile-toggle:hover{border-color:var(--blue);color:var(--blue)}
-[data-theme="dark"] .theme-toggle:hover,[data-theme="dark"] .mobile-toggle:hover{border-color:var(--cyan);color:var(--cyan)}
-@media (min-width:981px){#themeToggle{display:inline-flex;width:36px;height:36px}}
-@media (max-width:980px){
-  .nav-container{gap:.75rem;padding:.65rem .9rem}
-  .logo-group{gap:.55rem}
-  .mobile-toggle,#themeToggleMobile{width:42px;height:42px}
-}
-@media (max-width:430px){
-  .cage-badge{display:none}
-  .logo-group img{height:32px}
-  .logo-text{font-size:1.05rem;overflow:hidden;text-overflow:ellipsis}
-}
-</style>
-</head>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{line-height:1.65;overflow-x:hidden}img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.5rem}section{padding:5rem 0}.alt{background:var(--bg-alt)}
+header{position:fixed;top:0;left:0;right:0;z-index:100}
+.nav-container{max-width:1180px;margin:0 auto;padding:.7rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
+.logo-group{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+nav{display:flex;align-items:center;gap:1.4rem}nav a{text-decoration:none;font-size:.86rem;font-weight:500}nav a.btn{color:#fff;font-size:.74rem}
+.mobile-toggle{display:none;width:40px;height:40px;border:1px solid var(--border);background:var(--card);color:#fff;border-radius:6px;font-size:1.1rem}
+.mobile-menu{display:none;position:fixed;top:58px;left:0;right:0;background:var(--bg);padding:1rem 1.5rem 1.5rem;z-index:99;flex-direction:column;border-bottom:1px solid var(--border)}
+.mobile-menu.open{display:flex}.mobile-menu a{color:#fff;text-decoration:none;padding:.7rem 0;border-bottom:1px solid var(--border)}.mobile-menu a.btn{border:0;margin-top:.8rem;text-align:center}
+.hero{position:relative;padding:9rem 0 7rem;background:var(--ink);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(5,13,28,.96) 0,rgba(5,13,28,.8) 38%,rgba(5,13,28,.12) 78%)}
+.slide{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s}.slide.on{opacity:1}.slide:first-child{background-position:right center}
+.dots{position:absolute;right:1.5rem;bottom:6.5rem;z-index:4;display:flex;gap:.5rem}.dots button{width:34px;height:5px;border:0;border-radius:3px;background:#ffffff55;cursor:pointer;padding:0}.dots button.on{background:#6ea8ff}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:140px;background:linear-gradient(transparent,var(--ink))}
+.hero .wrap{position:relative;z-index:2}.hero .in{max-width:640px}
+.kicker{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#c3cfe4;margin-bottom:1.2rem}
+h1{font-size:clamp(2.5rem,5.4vw,4.3rem);line-height:1.04;font-weight:800;letter-spacing:-.025em;color:#fff}h1 span{color:#6ea8ff;display:block}
+.hero p{color:#d3dcec;font-size:1.08rem;margin:1.4rem 0 1.8rem}
+.badges{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.8rem}.badges div{border:1px solid #2a4570;background:#0a1a3380;border-radius:6px;padding:.55rem 1rem;font-size:.82rem;color:#c3cfe4;line-height:1.3}.badges b{display:block;color:#fff;font-family:'Archivo';font-size:.98rem}
+.row{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.tiles{position:relative;z-index:3;margin-top:-4rem}.tiles .wrap{display:grid;grid-template-columns:repeat(6,1fr);gap:.8rem}
+.tile{position:relative;display:flex;flex-direction:column;min-height:300px;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--card);text-decoration:none;color:#fff}
+.tile img{position:absolute;inset:auto 0 0;height:55%;width:100%;object-fit:cover;opacity:.8;transition:opacity .2s}.tile:hover img{opacity:1}.tile:hover{border-color:var(--signal)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--card) 35%,transparent 100%)}
+.tile div{position:relative;z-index:2;padding:1.1rem 1rem}.tile svg{width:30px;height:30px;stroke:#9cc4ff;fill:none;stroke-width:1.5;margin-bottom:.6rem}
+.tile h3{font-size:1rem;line-height:1.25;margin-bottom:.4rem}.tile p{font-size:.84rem;color:#c3cfe4;line-height:1.45}
+.stats{padding:3rem 0;border-block:1px solid var(--border);margin-top:3rem}.stats .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}
+.stat b{display:block;font:800 2.2rem/1 'Archivo';color:#fff}.stat span{font-size:.88rem;color:var(--muted)}
+.fed{position:relative;overflow:hidden}.fed::before{content:"";position:absolute;inset:0 0 0 45%;background:url(images/aircraft-sunset.jpg) center/cover;opacity:.9;-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
+.fed{padding:6rem 0}.fed .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
+h2{font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.1;max-width:20ch}.lead{color:var(--muted);max-width:60ch;margin-top:1rem;font-size:1.03rem}
+.facts{list-style:none;display:grid;gap:.9rem;border-left:1px solid var(--border);padding-left:2rem}.facts li{font-size:.95rem;color:var(--muted)}.facts b{display:block;color:#fff;font-family:'Archivo'}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}.split img{border-radius:8px;width:100%}
+.steps{list-style:none;margin-top:2rem;counter-reset:s}.steps li{counter-increment:s;padding:1rem 0 1rem 3.2rem;border-top:1px solid var(--border);position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:1rem;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--signal);color:#fff;font:700 .95rem 'Archivo';display:grid;place-items:center}
+.steps b{display:block;font-family:'Archivo';color:#fff}.steps span{color:var(--muted);font-size:.93rem}
+.strip{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:230px 230px;gap:.8rem;margin-top:2.5rem}.strip figure{position:relative;border-radius:8px;overflow:hidden}.strip figure:first-child{grid-row:span 2}.strip img{width:100%;height:100%;object-fit:cover}
+.strip figcaption{position:absolute;inset:auto 0 0;padding:1.8rem 1rem .8rem;background:linear-gradient(transparent,rgba(5,13,28,.9));color:#fff;font-size:.85rem;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 2.2rem}.tags span{background:var(--card);border:1px solid var(--border);padding:.35rem .8rem;border-radius:4px;font-size:.88rem;color:#c3cfe4}
+h3.sub{font-size:1.05rem;margin-top:2rem;color:#fff}
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:3.5rem;align-items:center}.about img{border-radius:8px;width:100%}
+.contact{background:linear-gradient(180deg,#08142a,#050d1c);border-top:1px solid var(--border)}.contact .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:3.5rem}
+.direct{margin-top:2rem}.direct a.big{font:800 2.2rem 'Archivo';color:#fff;text-decoration:none}.direct p{color:var(--muted);margin-top:.6rem;font-size:.95rem}
+form{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.8rem;display:grid;gap:1rem}.r2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{font-size:.82rem;font-weight:600;display:grid;gap:.35rem;color:#c3cfe4}input,select,textarea{font:inherit;padding:.75rem .9rem;border:1px solid var(--border);border-radius:4px;background:#050d1c;color:#fff;width:100%}textarea{min-height:110px;resize:vertical}
+form .btn{border:0;cursor:pointer;padding:1.05rem}#formStatus{font-size:.9rem;min-height:1.2em;color:var(--muted)}
+footer{padding:2.5rem 1.5rem;text-align:center;font-size:.85rem}
+@media(max-width:1080px){.tiles .wrap{grid-template-columns:repeat(3,1fr)}.stats .wrap{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:980px){nav{display:none}.mobile-toggle{display:block}.fed .wrap,.split,.about,.contact .wrap{grid-template-columns:1fr}.hero::before{background:linear-gradient(180deg,rgba(5,13,28,.85),rgba(5,13,28,.7))}.dots{right:auto;left:1.5rem}.facts{border:0;padding:0}.fed::before{opacity:.3}}
+@media(max-width:640px){section{padding:3.6rem 0}.hero{padding:7rem 0 6rem}.tiles .wrap,.stats .wrap{grid-template-columns:1fr 1fr}.r2{grid-template-columns:1fr}.strip{grid-template-columns:1fr;grid-template-rows:none}.strip figure,.strip figure:first-child{grid-row:auto;height:210px}.cage-badge{display:none}}
+</style></head>
 <body>
+<header><div class="nav-container">
+<a href="index.html" class="logo-group"><img src="images/strantech-logo-light.png" alt=""><span class="logo-text">STRANTECH</span><span class="cage-badge">CAGE 1W2E4</span></a>
+<nav><a href="index.html" class="active">Home</a><a href="capabilities.html">Capabilities</a><a href="partners.html">Federal Contracting</a><a href="#performance">Past Performance</a><a href="locations.html">Global Operations</a><a href="about.html">About</a><a href="#contact">Contact</a><a href="#contact" class="btn btn-primary btn-arrow">Request a consultation</a></nav>
+<button class="mobile-toggle" id="menuBtn" aria-label="Menu">☰</button></div></header>
+<div class="mobile-menu" id="menu"><a href="index.html" class="active">Home</a><a href="capabilities.html">Capabilities</a><a href="partners.html">Federal Contracting</a><a href="#performance">Past Performance</a><a href="locations.html">Global Operations</a><a href="about.html">About</a><a href="#contact">Contact</a><a href="#contact" class="btn btn-primary btn-arrow">Request a consultation</a></div>
 
-  <header>
-    <div class="nav-container">
-      <a href="#" class="logo-group">
-        <img src="images/strantech-logo.png" alt="STRANTECH Logo" />
-        <span class="logo-text">STRANTECH</span>
-        <span class="cage-badge">CAGE: 1W2E4</span>
-      </a>
+<section class="hero">
+<div class="slide on" style="background-image:url(images/hero-radar-site.jpg)"></div>
+<div class="slide" style="background-image:url(images/modular-scif-buildouts.jpg)"></div>
+<div class="slide" style="background-image:url(images/data-center-infrastructure.jpg)"></div>
+<div class="slide" style="background-image:url(images/high-density-cable-plant.jpg)"></div>
+<div class="dots" role="tablist" aria-label="Hero slides"></div>
+<div class="wrap"><div class="in">
+<div class="kicker">Mission-critical infrastructure. Anywhere in the world.</div>
+<h1>Secure infrastructure,<span>built and kept running.</span></h1>
+<p>STRANTECH delivers engineering, construction, power, telecommunications and mission-critical technology infrastructure for U.S. federal agencies, defense organizations and commercial customers worldwide.</p>
+<div class="badges"><div>CAGE<b>1W2E4</b></div><div><b>GSA MAS</b>Contract holder</div><div><b>Top Secret</b>Facility clearance</div></div>
+<div class="row"><a href="#contact" class="btn btn-primary btn-lg">Request a consultation</a><a href="capabilities.html" class="btn btn-outline btn-lg">Explore our capabilities</a></div>
+</div></div></section>
 
-      <nav>
-        <a href="capabilities.html">Capabilities</a>
-        <a href="#contracts">Contracts</a>
-        <a href="partners.html">Partners</a>
-        <a href="about.html">About Us</a>
-        <a href="#performance">Past Performance</a>
-        <a href="locations.html">Locations</a>
-        <a href="#contact" class="btn btn-primary">Contact Us</a>
-        <button class="theme-toggle" id="themeToggle" title="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-      </nav>
+<div class="tiles" id="capabilities"><div class="wrap">
+<a class="tile" href="capabilities.html"><div><svg viewBox="0 0 24 24"><path d="M4 20V4l16 16zM4 14h6"/></svg><h3>Engineering & Design</h3><p>Multi-discipline engineering, CAD and site assessment.</p></div><img src="images/design-engineering-cad.jpg" alt="" loading="lazy"></a>
+<a class="tile" href="capabilities.html"><div><svg viewBox="0 0 24 24"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 8v3"/></svg><h3>Construction Management</h3><p>SCIF, NOC and data center builds, in any environment.</p></div><img src="images/modular-scif-buildouts.jpg" alt="" loading="lazy"></a>
+<a class="tile" href="capabilities.html"><div><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3>Power Infrastructure</h3><p>UPS, generators, fuel cells and AC/DC plant design.</p></div><img src="images/power-ups-systems.jpg" alt="" loading="lazy"></a>
+<a class="tile" href="capabilities.html"><div><svg viewBox="0 0 24 24"><path d="M12 11v10M8 21h8M7 7a7 7 0 0 1 10 0M4 4a11 11 0 0 1 16 0"/><circle cx="12" cy="10" r="1"/></svg><h3>Telecommunications</h3><p>GPON, VoIP, DWDM and central office cutovers.</p></div><img src="images/osp-aerial-operations.jpg" alt="" loading="lazy"></a>
+<a class="tile" href="capabilities.html"><div><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="7" rx="1"/><rect x="4" y="14" width="16" height="7" rx="1"/><path d="M8 6.5h.01M8 17.5h.01"/></svg><h3>Technology Infrastructure</h3><p>Data centers, cooling, racks and structured cabling.</p></div><img src="images/data-center-infrastructure.jpg" alt="" loading="lazy"></a>
+<a class="tile" href="capabilities.html"><div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg><h3>Operations & Maintenance</h3><p>Test, preventative maintenance and lifecycle support.</p></div><img src="images/fiber-optic-installation.jpg" alt="" loading="lazy"></a>
+</div></div>
 
-      <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggleMobile" title="Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-      </div>
-    </div>
-  </header>
+<div class="stats"><div class="wrap">
+<div class="stat"><b>30+</b><span>Years delivering critical infrastructure</span></div>
+<div class="stat"><b>12+</b><span>Federal agencies and services supported</span></div>
+<div class="stat"><b>17</b><span>Locations delivered, U.S. and overseas</span></div>
+<div class="stat"><b>TS</b><span>Top Secret facility clearance</span></div>
+<div class="stat"><b>ISO 9001</b><span>Certified quality management, 2015</span></div>
+</div></div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="capabilities.html">Capabilities</a>
-    <a href="#contracts" onclick="closeMobile()">Contracts</a>
-    <a href="partners.html" onclick="closeMobile()">Partners</a>
-    <a href="about.html" onclick="closeMobile()">About Us</a>
-    <a href="#performance" onclick="closeMobile()">Past Performance</a>
-    <a href="locations.html" onclick="closeMobile()">Locations</a>
-    <a href="#contact" class="btn btn-primary" style="margin-top:0.5rem;" onclick="closeMobile()">Contact Us</a>
-  </div>
+<section class="fed" id="contracts"><div class="wrap">
+<div><h2>A trusted partner for federal missions.</h2>
+<p class="lead">We hold a DoD Top Secret facility clearance and a large workforce with U.S. Government-administered clearances, and we support CMMC requirements.</p>
+<div class="row" style="margin-top:2rem"><a href="partners.html" class="btn btn-primary btn-lg">View contract details</a></div></div>
+<ul class="facts"><li><b>GSA MAS</b>47QSWA-19-D-004F</li><li><b>U.S. Air Force PCCIE MAC III</b>Power Conditioning Continuation and Interfacing Equipment</li><li><b>DLA NISS IDIQ</b>Network Infrastructure Support Services</li><li><b>CAGE 1W2E4</b>SAM active registration</li></ul>
+</div></section>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-inner">
+<section class="alt"><div class="wrap split">
+<div><h2>One lifecycle, one point of accountability.</h2><p class="lead">Professional engineers across civil, electrical, mechanical, structural and telecommunications disciplines stay with your project from first drawing to last maintenance visit.</p>
+<ol class="steps"><li><b>Assess and design</b><span>Engineering and CAD, with site assessment up front.</span></li><li><b>Build and install</b><span>Mechanical, electrical, cable plant and secure construction by cleared crews.</span></li><li><b>Maintain and support</b><span>Test, preventative maintenance and lifecycle support after cutover.</span></li></ol></div>
+<div style="display:grid;gap:1rem"><img src="images/design-engineering-cad.jpg" alt="Engineer reviewing a facility plan on a CAD workstation" loading="lazy"><img src="images/mechanical-piping-systems.jpg" alt="Mechanical piping system overlaid with engineering drawings" loading="lazy"></div>
+</div></section>
 
-      <div class="hero-network" aria-hidden="true">
-        <svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9"/>
-              <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
-            </radialGradient>
-            <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
-              <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
+<section><div class="wrap"><h2>On the ground, wherever the work is.</h2>
+<div class="strip">
+<figure><img src="images/directional-drilling-osp.jpg" alt="Operator running a horizontal directional drill" loading="lazy"><figcaption>Directional drilling for outside plant</figcaption></figure>
+<figure><img src="images/outdoor-power-infrastructure.jpg" alt="Outdoor fuel cell power units" loading="lazy"><figcaption>Outdoor power infrastructure</figcaption></figure>
+<figure><img src="images/fiber-optic-installation.jpg" alt="Technician terminating fiber" loading="lazy"><figcaption>Fiber termination</figcaption></figure>
+<figure style="grid-column:span 2"><img src="images/osp-aerial-operations.jpg" alt="Aerial lift crew at a utility pole" loading="lazy"><figcaption>Aerial OSP operations</figcaption></figure>
+</div></div></section>
 
-          <g stroke="#22d3ee" stroke-opacity="0.35" stroke-width="1" fill="none">
-            <line x1="80" y1="120" x2="180" y2="90"/>
-            <line x1="180" y1="90" x2="280" y2="140"/>
-            <line x1="280" y1="140" x2="380" y2="80"/>
-            <line x1="380" y1="80" x2="480" y2="130"/>
-            <line x1="480" y1="130" x2="550" y2="90"/>
-            <line x1="80" y1="120" x2="140" y2="220"/>
-            <line x1="140" y1="220" x2="220" y2="180"/>
-            <line x1="220" y1="180" x2="280" y2="140"/>
-            <line x1="280" y1="140" x2="340" y2="240"/>
-            <line x1="340" y1="240" x2="420" y2="200"/>
-            <line x1="420" y1="200" x2="480" y2="130"/>
-            <line x1="140" y1="220" x2="200" y2="320"/>
-            <line x1="200" y1="320" x2="300" y2="280"/>
-            <line x1="300" y1="280" x2="340" y2="240"/>
-            <line x1="300" y1="280" x2="400" y2="340"/>
-            <line x1="400" y1="340" x2="480" y2="300"/>
-            <line x1="480" y1="300" x2="550" y2="360"/>
-            <line x1="420" y1="200" x2="480" y2="300"/>
-            <line x1="200" y1="320" x2="260" y2="400"/>
-            <line x1="260" y1="400" x2="360" y2="380"/>
-            <line x1="360" y1="380" x2="400" y2="340"/>
-            <line x1="360" y1="380" x2="460" y2="420"/>
-            <line x1="180" y1="90" x2="220" y2="180"/>
-            <line x1="380" y1="80" x2="420" y2="200"/>
-            <line x1="80" y1="120" x2="100" y2="300"/>
-            <line x1="100" y1="300" x2="200" y2="320"/>
-            <line x1="480" y1="130" x2="520" y2="220"/>
-            <line x1="520" y1="220" x2="480" y2="300"/>
-            <line x1="300" y1="280" x2="220" y2="180"/>
-            <line x1="400" y1="340" x2="340" y2="240"/>
-          </g>
+<section id="performance" class="alt"><div class="wrap">
+<h2>Proven past performance.</h2>
+<p class="lead">STRANTECH has built, maintained and secured mission-critical information and infrastructure for the U.S. Government and its top system integrators, and for large multinational corporations, for over three decades.</p>
+<h3 class="sub">Trusted by</h3><div class="tags"><span>U.S. Army</span><span>U.S. Navy</span><span>U.S. Air Force</span><span>U.S. Marine Corps</span><span>DISA</span><span>DHS</span><span>NASA</span><span>NGA</span><span>Army National Guard</span><span>DOJ</span><span>Veterans Affairs</span><span>U.S. Postal Service</span></div>
+<h3 class="sub" id="global">Delivered in</h3><div class="tags"><span>Continental U.S.</span><span>Hawaii</span><span>Guam</span><span>Kwajalein</span><span>Germany</span><span>Italy</span><span>Greece</span><span>Spain</span><span>United Kingdom</span><span>Japan</span><span>South Korea</span><span>Diego Garcia</span><span>Bahrain</span><span>Kuwait</span><span>UAE</span><span>Saudi Arabia</span><span>Qatar</span></div>
+<h3 class="sub">Certifications</h3><div class="tags"><span>ISO 9001:2015</span><span>AS9100</span><span>UL Registered Firm</span><span>ANAB</span><span>PMI</span><span>HSPD-12 Service Provider</span><span>CSEIP</span><span>BICSI RCDD</span><span>BICSI Certified Technicians</span></div>
+</div></section>
 
-          <g filter="url(#softGlow)">
-            <circle cx="80" cy="120" r="4" fill="#22d3ee"/>
-            <circle cx="180" cy="90" r="5" fill="#67e8f9"/>
-            <circle cx="280" cy="140" r="4.5" fill="#22d3ee"/>
-            <circle cx="380" cy="80" r="4" fill="#67e8f9"/>
-            <circle cx="480" cy="130" r="5" fill="#22d3ee"/>
-            <circle cx="550" cy="90" r="3.5" fill="#67e8f9"/>
-            <circle cx="140" cy="220" r="4" fill="#22d3ee"/>
-            <circle cx="220" cy="180" r="4.5" fill="#67e8f9"/>
-            <circle cx="340" cy="240" r="5" fill="#22d3ee"/>
-            <circle cx="420" cy="200" r="4" fill="#67e8f9"/>
-            <circle cx="200" cy="320" r="4.5" fill="#22d3ee"/>
-            <circle cx="300" cy="280" r="5" fill="#67e8f9"/>
-            <circle cx="400" cy="340" r="4" fill="#22d3ee"/>
-            <circle cx="480" cy="300" r="4.5" fill="#67e8f9"/>
-            <circle cx="550" cy="360" r="3.5" fill="#22d3ee"/>
-            <circle cx="260" cy="400" r="4" fill="#67e8f9"/>
-            <circle cx="360" cy="380" r="4.5" fill="#22d3ee"/>
-            <circle cx="460" cy="420" r="3.5" fill="#67e8f9"/>
-            <circle cx="100" cy="300" r="3.5" fill="#22d3ee"/>
-            <circle cx="520" cy="220" r="4" fill="#67e8f9"/>
-          </g>
+<section><div class="wrap about">
+<div><h2>Same trusted team. Expanded reach.</h2><p class="lead">On January 21, 2026, Stran Technologies IT Services and AllCom Global Services LLC became STRANTECH. Protecting critical infrastructure is vital to national and economic security, and our ISO 9001:2015 quality system keeps every project reliable, secure and accountable.</p>
+<div class="row" style="margin-top:2rem"><a href="about.html" class="btn btn-outline btn-lg">Meet the team</a></div></div>
+<img src="images/naugatuck-facility.jpg" alt="STRANTECH Naugatuck facility surrounded by autumn foliage" loading="lazy">
+</div></section>
 
-          <circle cx="300" cy="280" r="40" fill="url(#nodeGlow)" opacity="0.25"/>
-          <circle cx="420" cy="200" r="30" fill="url(#nodeGlow)" opacity="0.2"/>
-          <circle cx="180" cy="90" r="25" fill="url(#nodeGlow)" opacity="0.2"/>
-        </svg>
-      </div>
+<section id="contact" class="contact"><div class="wrap">
+<div><h2>Tell us about your project.</h2><p class="lead">Data centers, secure facilities, power, cable plant or contract support: share a few details and an engineer will respond.</p>
+<div class="direct"><a class="big" href="tel:+18883081810">888.308.1810</a><p>Headquarters<br>10790 Parkridge Blvd., Suite 350, Reston, VA 20191</p></div></div>
+<form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="post">
+<div class="r2"><label>Name<input name="name" required autocomplete="name"></label><label>Organization<input name="organization" autocomplete="organization"></label></div>
+<div class="r2"><label>Work email<input type="email" name="email" required autocomplete="email"></label><label>Phone<input type="tel" name="phone" autocomplete="tel"></label></div>
+<label>What do you need?<select name="interest"><option>Engineering and design</option><option>Construction / SCIF</option><option>Power infrastructure</option><option>Telecommunications</option><option>Technology infrastructure</option><option>Operations and maintenance</option><option>Contract vehicle question</option></select></label>
+<label>Project details<textarea name="message"></textarea></label>
+<button class="btn btn-primary" type="submit">Request a consultation</button><p id="formStatus" role="status"></p></form>
+</div></section>
 
-    <div class="hero-content">
-      <div class="pill">Stran Technologies IT Services + AllCom Global Services → STRANTECH</div>
-      
-      <h1>
-        Strengthening<br>
-        <span class="accent">Mission-Critical</span><br>
-        Networks
-      </h1>
-
-      <div class="accent-line" style="background:linear-gradient(90deg,#6b2d8b,#e85d04);"></div>
-      
-      <p>
-        On January 21, 2026, Stran Technologies IT Services merged with AllCom Global Services LLC 
-        to form STRANTECH — delivering design, engineering, implementation and maintenance of 
-        secure and resilient mission-critical technology infrastructure solutions to the U.S. 
-        Government and commercial customers worldwide.
-      </p>
-      
-      <div class="hero-actions">
-        <a href="capabilities.html" class="btn btn-primary">Explore Capabilities</a>
-        <a href="about.html" class="btn btn-outline">About Us</a>
-      </div>
-    </div>
-    </div>
-  </section>
-
-  <!-- Banner -->
-  <div class="banner">
-    <div class="accent-line-center"></div>
-    <h2>Solving complex challenges and delivering seamless support through the project lifecycle</h2>
-  </div>
-
-  <!-- Capabilities -->
-  <section id="capabilities" style="background:var(--bg-alt);">
-    <div class="container">
-      <div class="section-label">Full Spectrum Capabilities</div>
-      <h2>Expertise Across the Mission Lifecycle</h2>
-      <div class="accent-line"></div>
-      <p class="lead">
-        STRANTECH provides full-service expertise, products and capabilities to ensure your IT 
-        infrastructure can meet the current and future demands of the critical systems and missions you support.
-      </p>
-
-      <div class="svc-grid">
-        <div class="card">
-          <h3>Data Center Solutions</h3>
-          <ul>
-            <li>Data Center Assessment & Design</li>
-            <li>Thermal & Power Management</li>
-            <li>High-Density Cooling Systems</li>
-            <li>Physical & Electronic Security</li>
-            <li>Racks, Cable Ladder & Conveyance</li>
-            <li>Preventative Maintenance</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Specialized & Secure Construction</h3>
-          <ul>
-            <li>SCIF, NOC & Data Center Build</li>
-            <li>Design/Build & Site Management</li>
-            <li>Mechanical, Electrical & Plumbing</li>
-            <li>Fire Suppression & Monitoring</li>
-            <li>Threat Mitigation Systems</li>
-            <li>Cleared American Worker (CAW) Support</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Power Systems</h3>
-          <ul>
-            <li>AC/DC Power Plant Design</li>
-            <li>UPS, Batteries & Inverters</li>
-            <li>ATS & Power Distribution</li>
-            <li>Backup Generators & Fuel Cells</li>
-            <li>Grounding & Fault Protection</li>
-            <li>Mission-Critical Reliability</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>International Secure Construction</h3>
-          <ul>
-            <li>Global Program Management</li>
-            <li>Cleared Workforce Deployment</li>
-            <li>Secure Facilities Fit-Out</li>
-            <li>Environmental & Mechanical Systems</li>
-            <li>Security & Threat Mitigation</li>
-            <li>End-to-End Project Lifecycle</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Cable Plant & Network Infrastructure</h3>
-          <ul>
-            <li>ISP / OSP Construction</li>
-            <li>Structured & Bundled Fiber</li>
-            <li>Protected Distribution (SIPRNET)</li>
-            <li>Wireless LAN & WAN Circuits</li>
-            <li>Installation, Test & Maintenance</li>
-            <li>Enterprise Scalability</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Unified Communications & Telecom</h3>
-          <ul>
-            <li>Voice, Data & Wireless Networks</li>
-            <li>GPON, VoIP & DWDM</li>
-            <li>Central Office Design & Cutover</li>
-            <li>Integrated Alarm Systems</li>
-            <li>Design, Build & Lifecycle Support</li>
-            <li>Mission-Critical Connectivity</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contracts -->
-  
-  
-  
-  <section id="contracts">
-    <div class="container">
-      <div class="section-label">Credentials & Vehicles</div>
-      <h2>Contracts, Licenses & Certifications</h2>
-      <div class="accent-line"></div>
-      <p class="lead">
-        We hold a Department of Defense top-secret security facility clearance and employ a large, 
-        specialized technical workforce with U.S. Government-administered security clearances. 
-        We also maintain appropriate levels of cyber and information security protocols, including 
-        Cybersecurity Maturity Model Certification (CMMC) requirements.
-      </p>
-
-      <div class="two-col">
-        <div>
-          <div class="side-box" style="margin-bottom:1.25rem;">
-            <h4>Prime Contracts</h4>
-            <ul>
-              <li>GSA MAS: 47QSWA-19-D-004F</li>
-              <li>U.S. Air Force Power Conditioning Continuation and Interfacing Equipment (PCCIE) MAC III</li>
-              <li>Defense Logistics Agency, Network Infrastructure Support Services (NISS) IDIQ</li>
-            </ul>
-          </div>
-          <div class="side-box">
-            <h4>Key Identifiers</h4>
-            <ul>
-              <li>CAGE Code: 1W2E4</li>
-              <li>SAM Active Registration</li>
-              <li>Top-Secret Facility Clearance</li>
-              <li>CMMC Requirements Supported</li>
-            </ul>
-          </div>
-        </div>
-        <div class="side-box">
-          <h4>Licenses & Certifications</h4>
-          <ul>
-            <li>ISO 9001:2015 Certified</li>
-            <li>UL Registered Firm</li>
-            <li>AS9100 Registered</li>
-            <li>ANAB Registered</li>
-            <li>PMI Certifications</li>
-            <li>HSPD-12 Service Provider</li>
-            <li>Systems Engineer ICAM PACS (CSEIP)</li>
-            <li>BICSI RCDD</li>
-            <li>BICSI Certified Technicians</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Past Performance -->
-  <section id="performance">
-    <div class="container">
-      <div class="section-label">Track Record</div>
-      <h2>Successful Past Performance & Partnerships</h2>
-      <div class="accent-line"></div>
-      <p class="lead">
-        With more than 30 years of critical technology infrastructure solutions expertise, 
-        STRANTECH professional engineers cross multiple disciplines including civil, electrical, 
-        mechanical, structural and telecommunications.
-      </p>
-      <p style="margin-top:1.2rem;color:var(--muted);max-width:800px;">
-        By combining the industry-leading expertise and capabilities of AllCom Global Services LLC 
-        and Stran Technologies IT Services, STRANTECH has successfully delivered solutions and 
-        projects on a global scale for U.S. Government customers and large multinational corporations 
-        for over three decades.
-      </p>
-      <p style="margin-top:1rem;color:var(--muted);max-width:800px;">
-        STRANTECH has been a valued partner to the U.S. Government and our nation’s top system integrators — 
-        building, maintaining and securing national security mission-critical information and infrastructure 
-        for the U.S. Army, U.S. Navy, U.S. Air Force, U.S. Marine Corps, Defense Information Systems Agency, 
-        Department of Homeland Security, NASA, National Geospatial Intelligence Agency, Army National Guard, 
-        Department of Justice, Department of Veterans Affairs, U.S. Postal Service and numerous other federal agencies.
-      </p>
-      <p style="margin-top:1rem;color:var(--muted);max-width:800px;">
-        Our global support includes successful projects across the continental U.S., Hawaii, Germany, 
-        Japan, South Korea, Guam, Italy, Greece, Spain, Diego Garcia, United Kingdom, Bahrain, Kuwait, 
-        United Arab Emirates, Saudi Arabia, Qatar and Kwajalein Islands.
-      </p>
-    </div>
-  </section>
-
-    <!-- About -->
-  <section id="about">
-    <div class="container">
-      <div class="section-label">Our Evolution</div>
-      <h2>Same Trusted Team. Expanded Capabilities. Global Reach.</h2>
-      <div class="accent-line"></div>
-      <p class="lead">
-        STRANTECH understands that the protection of our nation’s critical infrastructure is vital 
-        to national and economic security. We are committed to delivering reliable, secure and high-quality 
-        services through disciplined processes, continuous improvement and a culture of accountability.
-      </p>
-      <p style="margin-top:1.1rem;color:var(--muted);max-width:800px;">
-        Our quality management approach, driven by ISO 9001:2015, is aligned with industry best practices 
-        and regulatory requirements. Driven by multi-domain professional engineering, we deliver design, 
-        mechanical, electrical and telecommunications capabilities to customers globally.
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" style="background:var(--bg-alt);">
-    <div class="container">
-      <div class="section-label">Get In Touch</div>
-      <h2>Let’s Discuss Your Mission</h2>
-      <div class="accent-line"></div>
-      <p class="lead">
-        Ready to talk about secure infrastructure, data centers, tactical communications, or contract support?
-      </p>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem;margin-top:2rem;max-width:760px;">
-          <div class="card">
-            <h3>Call Us</h3>
-            <p style="margin-bottom:0.9rem;">Speak directly with our team about your mission requirements.</p>
-            <a href="tel:+18883081810" class="btn btn-primary">888.308.1810</a>
-          </div>
-          <div class="card">
-            <h3>Headquarters</h3>
-            <p>10790 Parkridge Blvd., Suite 350<br />Reston, VA 20191</p>
-          </div>
-        </div>
-
-      <p style="margin-top:2rem;font-size:0.9rem;color:var(--muted);">
-        Visit us at: <a href="https://www.allcomgs.com" style="color:var(--blue);">www.allcomgs.com</a> · 
-        <a href="https://www.strantech.com" style="color:var(--blue);">www.strantech.com</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="logo-group">
-      <img src="images/strantech-logo.png" alt="STRANTECH" style="height:32px" />
-      <span class="logo-text" style="font-size:1.1rem">STRANTECH</span>
-    </div>
-    <div class="accent-line-center" style="margin:1.2rem auto;"></div>
-    <p>© 2026 STRANTECH LLC · Strengthening Mission-Critical Networks · Safeguarding Innovation</p>
-    <p style="margin-top:0.4rem;font-size:0.8rem;opacity:0.8;">
-      Headquarters: 10790 Parkridge Blvd., Suite 350, Reston, VA 20191 · 888.308.1810
-    </p>
-  </footer>
-
-  <script>
-    const root = document.documentElement;
-    const toggles = [document.getElementById('themeToggle'), document.getElementById('themeToggleMobile')];
-    
-    /*header-icons*/const ICON_SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';const ICON_MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';const ICON_MENU='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';const ICON_CLOSE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';function setTheme(theme) {
-      if (theme === 'dark') {
-        root.setAttribute('data-theme', 'dark');
-      } else {
-        root.removeAttribute('data-theme');
-      }
-      localStorage.setItem('theme', theme);
-      toggles.forEach(t => { if(t) t.innerHTML = theme === 'dark' ? ICON_SUN : ICON_MOON; });
-    }
-
-    // Default to dark unless user previously chose light
-    const saved = localStorage.getItem('theme') || 'dark';
-    setTheme(saved);
-
-    toggles.forEach(btn => {
-      if(btn) btn.addEventListener('click', () => {
-        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        setTheme(next);
-      });
-    });
-
-    const mobileToggle = document.getElementById('mobileToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    mobileToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-      mobileToggle.innerHTML = mobileMenu.classList.contains('open') ? ICON_CLOSE : ICON_MENU;
-    });
-
-    function closeMobile() {
-      mobileMenu.classList.remove('open');
-      mobileToggle.innerHTML = ICON_MENU;
-    }
-  </script>
-
-  
-
-</body>
-</html>
+<footer><p>© 2026 STRANTECH LLC. Strengthening mission-critical networks. Safeguarding innovation.</p><p style="margin-top:.4rem">Reston, VA · <a href="tel:+18883081810">888.308.1810</a> · <a href="https://www.strantech.com">strantech.com</a></p></footer>
+<div class="callbar"><a class="btn btn-outline" href="tel:+18883081810">Call</a><a class="btn btn-primary" href="#contact">Request a consultation</a></div>
+<script src="polish.js"></script>
+<script>(function(){var sl=document.querySelectorAll('.slide'),d=document.querySelector('.dots'),i=0,t;
+sl.forEach(function(_,n){var b=document.createElement('button');b.setAttribute('aria-label','Show slide '+(n+1));b.onclick=function(){go(n);start()};d.appendChild(b)});
+function go(n){i=n;sl.forEach(function(x,k){x.classList.toggle('on',k===n)});d.childNodes.forEach(function(x,k){x.classList.toggle('on',k===n)})}
+function start(){clearInterval(t);if(!matchMedia('(prefers-reduced-motion:reduce)').matches)t=setInterval(function(){go((i+1)%sl.length)},6500)}
+go(0);start()})();var m=document.getElementById('menu');document.getElementById('menuBtn').onclick=function(){m.classList.toggle('open')};m.onclick=function(){m.classList.remove('open')};</script>
+</body></html>
